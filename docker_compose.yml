@@ -1,0 +1,8 @@
+services:
+  wheel-index:
+    image: wheelserver:py312
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./wheelhouse:/wheelhouse:ro
+    restart: unless-stopped

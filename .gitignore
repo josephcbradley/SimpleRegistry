@@ -1,3 +1,9 @@
+#ignore build files
+/wheelhouse 
+wheelserver_py312.tar 
+/transfer_fldr
+requirements-locked.txt
+.env
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
