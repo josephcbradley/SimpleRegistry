@@ -66,17 +66,16 @@ Copy ```wheelserver.tar```, ```wheelhouse``` (optionally compresssed) and ```doc
 
 ```bash
 docker load -i wheelserver_py312.tar
-docker compose up -d --pull=never
+docker compose --file docker_compose.yml up -d
 ```
 
-## Use 
+## Use
 
 On Windows, the users's ```uv.toml``` in ```%PROGRAMDATA%\uv```:
 
 ```toml
-[[tool.uv.index]]
-url = "http://IP_ADDR/simple"
-default = true
+[pip]
+index-url = "http://localhost:8000"
 ```
 
 where ```IP_ADDR``` is the IP address of the index host.
